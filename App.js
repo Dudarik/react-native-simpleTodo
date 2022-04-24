@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Header text='ToDo List' />
+      <Header title='ToDo List' />
       <View style={styles.dataContainer}>
         <View>
           <AddTodo onSubmit={addTodo} />
@@ -42,9 +42,3 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
-
-// const styles = StyleSheet.create({
-//   // constainer: {
-//   //   padding: 10,
-//   // },
-// });
