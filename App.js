@@ -19,9 +19,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Header text='ToDo List' />
-
+      <Header text='ToDo List' />
+      <View style={styles.dataContainer}>
         <View>
           <AddTodo onSubmit={addTodo} />
           {/* <Todolist todos={todos} onDelete={deleteTodo} /> */}
@@ -38,6 +37,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     flex: 1,
+  },
+  dataContainer: {
+    padding: 10,
   },
 });
 

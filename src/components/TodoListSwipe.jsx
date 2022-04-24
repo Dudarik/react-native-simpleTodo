@@ -38,7 +38,7 @@ export default function TodoListSwipe({ todos, onDelete }) {
 
   const renderHiddenItem = (data, rowMap) => (
     <View style={styles.rowBack}>
-      <Text>Left</Text>
+      {/* <Text>Left</Text> */}
       <TouchableOpacity
         style={[styles.backRightBtn, styles.backRightBtnLeft]}
         onPress={() => closeRow(rowMap, data.item.key)}>
@@ -58,7 +58,7 @@ export default function TodoListSwipe({ todos, onDelete }) {
         data={todos}
         renderItem={renderItem}
         renderHiddenItem={renderHiddenItem}
-        leftOpenValue={75}
+        leftOpenValue={0}
         rightOpenValue={-150}
         previewRowKey={"0"}
         previewOpenValue={-40}
@@ -79,15 +79,16 @@ const styles = StyleSheet.create({
   },
   rowFront: {
     alignItems: "center",
-    backgroundColor: "#CCC",
-    borderBottomColor: "black",
-    borderBottomWidth: 1,
+    backgroundColor: "#8e9eff",
+    marginTop: 10,
+    // borderBottomColor: "black",
+    // borderBottomWidth: 1,
     justifyContent: "center",
     height: 50,
   },
   rowBack: {
-    alignItems: "center",
-    backgroundColor: "#DDD",
+    // alignItems: "center",
+    // backgroundColor: "#DDD",
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -99,7 +100,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     position: "absolute",
     top: 0,
+    height: 50,
     width: 75,
+    marginTop: 10,
   },
   backRightBtnLeft: {
     backgroundColor: "blue",
